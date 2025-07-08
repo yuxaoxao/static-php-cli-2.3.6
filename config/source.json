@@ -335,7 +335,7 @@
     },
     "libiconv": {
         "type": "filelist",
-        "url": "https://ftp.gnu.org/gnu/libiconv/",
+        "url": "https://ftpmirror.gnu.org/libiconv/",
         "regex": "/href=\"(?<file>libiconv-(?<version>[^\"]+)\\.tar\\.gz)\"/",
         "provide-pre-built": true,
         "license": {
