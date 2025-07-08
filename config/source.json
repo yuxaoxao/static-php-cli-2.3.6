@@ -183,7 +183,7 @@
     },
     "gettext": {
         "type": "filelist",
-        "url": "https://ftp.gnu.org/pub/gnu/gettext/",
+        "url": "https://ftpmirror.gnu.org/gettext/",
         "regex": "/href=\"(?<file>gettext-(?<version>[^\"]+)\\.tar\\.xz)\"/",
         "license": {
             "type": "file",
@@ -543,7 +543,7 @@
     },
     "ncurses": {
         "type": "filelist",
-        "url": "https://ftp.gnu.org/pub/gnu/ncurses/",
+        "url": "https://ftpmirror.gnu.org/ncurses/",
         "regex": "/href=\"(?<file>ncurses-(?<version>[^\"]+)\\.tar\\.gz)\"/",
         "provide-pre-built": true,
         "license": {
@@ -665,7 +665,7 @@
     },
     "readline": {
         "type": "filelist",
-        "url": "https://ftp.gnu.org/pub/gnu/readline/",
+        "url": "https://ftpmirror.gnu.org/readline/",
         "regex": "/href=\"(?<file>readline-(?<version>[^\"]+)\\.tar\\.gz)\"/",
         "provide-pre-built": true,
         "license": {
