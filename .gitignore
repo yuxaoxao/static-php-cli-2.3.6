@@ -1,0 +1,47 @@
+.idea
+runtime/
+docker/libraries/
+docker/extensions/
+docker/source/
+
+# Vendor files
+/vendor/
+
+# default source extract directory
+/source/
+
+# default source download directory
+/downloads/
+
+# default source build root directory
+/buildroot/
+
+# default package root directory
+/pkgroot/
+
+# default pack:lib and release directory
+/dist/
+packlib_files.txt
+
+# tools cache files
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# exclude self-runtime
+/bin/*
+!/bin/spc*
+!/bin/setup-runtime*
+!/bin/spc-alpine-docker
+
+# exclude windows build tools
+/php-sdk-binary-tools/
+
+# default test directory
+/tests/var/
+
+# VitePress
+/node_modules/
+/docs/.vitepress/dist/
+/docs/.vitepress/cache/
+package-lock.json
+pnpm-lock.yaml
