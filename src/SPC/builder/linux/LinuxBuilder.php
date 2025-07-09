@@ -220,7 +220,7 @@ class LinuxBuilder extends UnixBuilderBase
         $vars = SystemUtil::makeEnvVarString($this->getMakeExtraVars());
         shell()->cd(SOURCE_PATH . '/php-src')
             ->exec('sed -i "s|//lib|/lib|g" Makefile')
-            ->exec("\$SPC_CMD_PREFIX_PHP_MAKE {$vars} cli");
+            ->exec("\$SPC_CMD_PREFIX_PHP_MAKE {$vars} cli --debug");
 
         if ($this->getOption('with-upx-pack')) {
             shell()->cd(SOURCE_PATH . '/php-src/sapi/cli')
