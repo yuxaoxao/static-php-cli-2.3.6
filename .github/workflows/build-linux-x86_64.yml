@@ -44,6 +44,24 @@ jobs:
     name: build ${{ inputs.version }} on Linux x86_64
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build OpenSSL 1.1.1
+        run: |
+          wget https://www.openssl.org/source/openssl-1.1.1w.tar.gz
+          tar -xzf openssl-1.1.1w.tar.gz
+          cd openssl-1.1.1w
+          ./config --prefix=/opt/openssl-1.1.1 no-shared
+          make -j$(nproc)
+          sudo make install
+
+      - name: Set OpenSSL 1.1.1 Environment
+        run: |
+          echo "PKG_CONFIG_PATH=/opt/openssl-1.1.1/lib/pkgconfig" >> $GITHUB_ENV
+          echo "LDFLAGS=-L/opt/openssl-1.1.1/lib" >> $GITHUB_ENV
+          echo "CPPFLAGS=-I/opt/openssl-1.1.1/include" >> $GITHUB_ENV
+          
       - uses: actions/checkout@v4
 
       # Cache composer dependencies
